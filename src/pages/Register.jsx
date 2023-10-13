@@ -30,15 +30,15 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="border flex flex-col justify-center items-center">
-        <h2>Sign Up Form</h2>
-        <form onSubmit={handleSubmit}>
+      <div className="m-10 flex flex-col justify-center items-center">
+        <form onSubmit={handleSubmit} className="bg-gray-700 p-10 rounded-2xl">
+          <h2>Sign Up Form</h2>
           <div>
             <label htmlFor="name">Username : </label>
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="border bg-gray-500"
+              className="border bg-gray-500 my-2"
               type="text"
             ></input>
           </div>
@@ -47,7 +47,7 @@ const Register = () => {
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border bg-gray-500"
+              className="border bg-gray-500 mb-2"
               type="email"
             ></input>
           </div>
@@ -63,12 +63,11 @@ const Register = () => {
           <button type="submit" className="border p-2 m-2 bg-green-700">
             Sign Up
           </button>
+          <Link to="/login" className="">
+            <p>Already have account.</p>Login
+          </Link>
         </form>
         <br></br>
-
-        <Link to="/login" className="">
-          <p>Already have account.</p>Login
-        </Link>
       </div>
     </div>
   );
