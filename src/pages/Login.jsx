@@ -37,15 +37,31 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="border flex flex-col justify-center items-center">
-        <h2>LOGIN</h2>
-        <form onSubmit={handleSubmit}>
+      <div className="m-4 flex flex-col justify-center items-center">
+        <div className="flex gap-5 items-center">
+          <div className=" flex flex-col shadow-xl items-center bg-gray-300 text-black rounded-xl w-1/2 p-5">
+            <h1>User1</h1>
+            <p>email: user1@gmail.com</p>
+            <p>password: user1</p>
+          </div>
+          <div className=" flex flex-col items-center shadow-xl bg-gray-300 text-black rounded-xl w-1/2 p-5">
+            <h1>User2</h1>
+            <p>email: user2@gmail.com</p>
+            <p>password: user2</p>
+          </div>
+        </div>
+
+        <form
+          onSubmit={handleSubmit}
+          className="mt-10 bg-gray-700 p-10 rounded-2xl"
+        >
           <div>
+            <h2>LOGIN</h2>
             <label htmlFor="email">Email : </label>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border bg-gray-500"
+              className="border bg-gray-500 my-2"
               type="email"
             ></input>
           </div>
@@ -61,12 +77,11 @@ const Login = () => {
           <button type="submit" className="border p-2 m-2 bg-green-700">
             LOGIN
           </button>
+          <Link to="/login" className="">
+            <p>if you do not have account?</p>Register
+          </Link>
         </form>
         <br></br>
-
-        <Link to="/login" className="">
-          <p>if you do not have account?</p>Register
-        </Link>
       </div>
     </div>
   );

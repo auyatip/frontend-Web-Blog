@@ -12,7 +12,7 @@ const BlogDetail = () => {
   const getBlogDetail = async () => {
     try {
       const data = await axios.get(
-        `http://localhost:8000/api/v1/blog/get-blog/${id}`
+        `https://backend-web-blog.onrender.com/api/v1/blog/get-blog/${id}`
       );
       if (data) {
         // console.log(data.data.blog.title);

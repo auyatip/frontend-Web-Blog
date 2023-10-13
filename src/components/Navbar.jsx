@@ -25,20 +25,25 @@ const Nav = () => {
     }
   };
   return (
-    <div className="flex justify-between p-4 border">
+    <div className="flex justify-between p-4 px-6  rounded-full bg-gray-800">
       <div>
         <h3>Blog APP</h3>
       </div>
-
+      <div className="bg-yellow-800 px-4 flex justify-center items-center rounded-xl py-1 hover:bg-yellow-900 duration-200">
+        <Link to="/blogs">ALL Blogs</Link>
+      </div>
       {isLogin ? (
         <div
           className="flex justify-between gap-4"
           value={value}
           onChange={(e, val) => setValue(val)}
         >
-          <Link to="/blogs">Blogs </Link>
-          <Link to="/my-blogs">My Blogs </Link>
-          <Link to="/create-blog">CreatYourBlog </Link>
+          <div className="bg-blue-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
+            <Link to="/my-blogs">My Blogs</Link>
+          </div>
+          <div className="bg-green-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-green-900 duration-200">
+            <Link to="/create-blog">Creat New Blog </Link>
+          </div>
         </div>
       ) : (
         ""
@@ -46,14 +51,18 @@ const Nav = () => {
 
       <div className="">
         {!isLogin ? (
-          <>
-            <Link to="/login" className="cursor-pointer m-1">
-              Login
-            </Link>
-            <Link to="/register" className="cursor-pointer">
-              Register
-            </Link>
-          </>
+          <div className="flex gap-2">
+            <div className="bg-blue-800 px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
+              <Link to="/login" className="cursor-pointer m-1">
+                Login
+              </Link>
+            </div>
+            <div className="bg-yellow-800 px-4 rounded-xl py-1 hover:bg-yellow-900 duration-200">
+              <Link to="/register" className="cursor-pointer">
+                Register
+              </Link>
+            </div>
+          </div>
         ) : (
           ""
         )}

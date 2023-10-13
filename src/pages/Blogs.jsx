@@ -26,7 +26,7 @@ const Blogs = () => {
   // console.log(blogs);
   // console.log(localStorage.getItem("userId"));
   return (
-    <div className="flex flex-col gap-2 m-4">
+    <div className="flex flex-col items- gap-2 m-4">
       {blogs &&
         blogs.map((blog, index) => (
           <BlogsCard
