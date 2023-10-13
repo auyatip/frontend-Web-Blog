@@ -77,7 +77,7 @@ const Login = () => {
           <button type="submit" className="border p-2 m-2 bg-green-700">
             LOGIN
           </button>
-          <Link to="/login" className="">
+          <Link to="/register" className="">
             <p>if you do not have account?</p>Register
           </Link>
         </form>

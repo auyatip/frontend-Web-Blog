@@ -29,21 +29,27 @@ const Nav = () => {
       <div>
         <h3>Blog APP</h3>
       </div>
-      <div className="bg-yellow-800 px-4 flex justify-center items-center rounded-xl py-1 hover:bg-yellow-900 duration-200">
-        <Link to="/blogs">ALL Blogs</Link>
-      </div>
+      <Link to="/blogs">
+        <div className="bg-yellow-800 px-4 flex justify-center items-center rounded-xl py-1 hover:bg-yellow-900 duration-200">
+          ALL Blogs
+        </div>
+      </Link>
       {isLogin ? (
         <div
           className="flex justify-between gap-4"
           value={value}
           onChange={(e, val) => setValue(val)}
         >
-          <div className="bg-blue-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
-            <Link to="/my-blogs">My Blogs</Link>
-          </div>
-          <div className="bg-green-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-green-900 duration-200">
-            <Link to="/create-blog">Creat New Blog </Link>
-          </div>
+          <Link to="/my-blogs">
+            <div className="bg-blue-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
+              My Blogs
+            </div>
+          </Link>
+          <Link to="/create-blog">
+            <div className="bg-green-800 flex justify-center items-center px-4 rounded-xl py-1 hover:bg-green-900 duration-200">
+              Creat New Blog
+            </div>
+          </Link>
         </div>
       ) : (
         ""
@@ -52,16 +58,16 @@ const Nav = () => {
       <div className="">
         {!isLogin ? (
           <div className="flex gap-2">
-            <div className="bg-blue-800 px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
-              <Link to="/login" className="cursor-pointer m-1">
+            <Link to="/login" className="cursor-pointer mx-1">
+              <div className="bg-blue-800 px-4 rounded-xl py-1 hover:bg-blue-900 duration-200">
                 Login
-              </Link>
-            </div>
-            <div className="bg-yellow-800 px-4 rounded-xl py-1 hover:bg-yellow-900 duration-200">
-              <Link to="/register" className="cursor-pointer">
+              </div>
+            </Link>
+            <Link to="/register" className="cursor-pointer">
+              <div className="bg-yellow-800 px-4 rounded-xl py-1 hover:bg-yellow-900 duration-200">
                 Register
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         ) : (
           ""
